@@ -1,0 +1,2 @@
+# mylibrary
+test android library
