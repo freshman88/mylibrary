@@ -4,11 +4,10 @@ plugins {
 }
 
 group = 'com.hupo.mylibrary'
-version = '0.0.5'
+version = '0.0.7'
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "31.0.0"
 
     defaultConfig {
         minSdkVersion 16
@@ -52,7 +51,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.hupo.mylibrary'
                 artifactId = 'wooo'
-                version = '0.0.5'
+                version = '0.0.7'
             }
         }
     }
