@@ -40,6 +40,9 @@ dependencies {
 
 afterEvaluate {
     publishing {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
@@ -49,7 +52,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.hupo.mylibrary'
                 artifactId = 'wooo'
-                version = '0.0.2'
+                version = '0.0.3'
             }
         }
     }
