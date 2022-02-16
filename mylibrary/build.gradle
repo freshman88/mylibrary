@@ -3,6 +3,9 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'com.hupo.mylibrary'
+version = '0.0.4'
+
 android {
     compileSdkVersion 31
     buildToolsVersion "32.0.0"
@@ -52,7 +55,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.hupo.mylibrary'
                 artifactId = 'wooo'
-                version = '0.0.3'
+                version = '0.0.4'
             }
         }
     }
