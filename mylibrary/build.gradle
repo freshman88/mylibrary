@@ -43,9 +43,6 @@ dependencies {
 
 afterEvaluate {
     publishing {
-        repositories {
-            maven { url "https://jitpack.io" }
-        }
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
