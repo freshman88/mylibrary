@@ -1,4 +1,0 @@
-com/example/mylibrary/BuildConfig.java
- com.example.mylibrary.BuildConfig
-com/hupo/mylibrary/Counter.java
- com.hupo.mylibrary.Counter
