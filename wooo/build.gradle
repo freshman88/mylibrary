@@ -1,10 +1,8 @@
 plugins {
     id 'com.android.library'
+    id 'com.kezong.fat-aar'
     id 'maven-publish'
 }
-
-group = 'com.hupo.mylibrary'
-version = '0.0.7'
 
 android {
     compileSdkVersion 31
@@ -15,7 +13,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -31,13 +28,17 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    embed(name: 'wooo-0.0.7', ext: 'aar')
 }
 
 afterEvaluate {
@@ -51,7 +52,7 @@ afterEvaluate {
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.hupo.mylibrary'
                 artifactId = 'wooo'
-                version = '0.0.7'
+                version = '0.0.8'
             }
         }
     }
